@@ -1,0 +1,11 @@
+Iniciar red de docker para comunicacion de los servicios
+docker network create microservicios
+
+Iniciar contenedor de eureka
+docker run -p 9097:9091 -e EUREKA_PORT=9091 --name eureka --network microservicios -d eureka:v1}
+
+Iniciar contenedor MYSQL
+docker run --name mysql -e MYSQL_ROOT_PASSWORD=1234 -e MYSQL_DATABASE=micro1 --network microservicios -d mysql:8.0
+
+Iniciar contenedor micro articulo 
+docker run --name micro-articulo -e MYSQL_IP=mysql -e MYSQL_DATABASE=micro1  -e MYSQL_USERNAME=root  -e MYSQL_PASS=1234 -e EUREKA_IP=eureka -e EUREKA_PORT=9091 --network microservicios -d articulo:v1
