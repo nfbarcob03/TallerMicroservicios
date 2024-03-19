@@ -1,3 +1,6 @@
+Generar los JAR:
+entrar la carpeta de cada micro y hacer mvnw clean install y cambiar el nombre al referenciado en cada Dockerfile
+
 Iniciar red de docker para comunicacion de los servicios
 docker network create microservicios
 
