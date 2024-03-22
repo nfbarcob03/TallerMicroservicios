@@ -33,4 +33,5 @@ docker logs micro-articulo (nombre contenedor)
 
 docker exec -it mysql (nombre contendor) /bin/bash ---> conexion al servidor de my sql
 
-
+para ver todo los micros en una red
+docker network inspect microservicos (nombre red)
