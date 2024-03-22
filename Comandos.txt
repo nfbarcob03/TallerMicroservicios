@@ -20,5 +20,17 @@ eliminar una imagen
 docker container rm micro-articulo
 
 Iniciar el gateway
-docker run -p 8081:8084 --name micro-gateway -e EUREKA_IP=eureka -e EUREKA_PORT=9091 --network microservicios -d gateway:v1
+docker run -p 8081:9092 --name micro-gateway -e EUREKA_IP=eureka -e EUREKA_PORT=9091 --network microservicios -d gateway:v1
+
+listar contenedores
+docker ps
+
+listar imagenes 
+docker images o docker image ls
+
+logs contenedor
+docker logs micro-articulo (nombre contenedor)
+
+docker exec -it mysql (nombre contendor) /bin/bash ---> conexion al servidor de my sql
+
 
