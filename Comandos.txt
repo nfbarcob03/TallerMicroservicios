@@ -11,4 +11,11 @@ Iniciar contenedor MYSQL
 docker run --name mysql -e MYSQL_ROOT_PASSWORD=1234 -e MYSQL_DATABASE=micro1 --network microservicios -d mysql:8.0
 
 Iniciar contenedor micro articulo 
-docker run --name micro-articulo -e MYSQL_IP=mysql -e MYSQL_DATABASE=micro1  -e MYSQL_USERNAME=root  -e MYSQL_PASS=1234 -e EUREKA_IP=eureka -e EUREKA_PORT=9091 --network microservicios -d articulo:v1
+docker run --name micro-articulo -e MYSQL_IP=mysql -e MYSQL_DATABASE=micro1   -e MYSQL_USERNAME=root  -e MYSQL_PASS=1234 -e EUREKA_IP=eureka -e EUREKA_PORT=9091 --network microservicios -d articulo:v1
+
+Detener un contenedor:
+docker stop micro-articulo
+
+eliminar una imagen
+docker container rm micro-articulo
+
